@@ -52,6 +52,15 @@ while(round>0)
 	{
 		round --;
 		time = rand() % 5 + 1;
+		if(player)
+		{
+			player = false;
+		}
+		else
+		{
+			player = true;
+		}
+
 	}
 	time --;
 }
