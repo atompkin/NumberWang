@@ -27,7 +27,7 @@ int main()
 cout << "What is player 1's name? ";
 cin >> name1;
 cout << endl;
-cout << "what is player 2's name? ";
+cout << "What is player 2's name? ";
 cin >> name2;
 cout << endl; 
  cout << "How many rounds? ";
