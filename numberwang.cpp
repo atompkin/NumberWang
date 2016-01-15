@@ -6,7 +6,7 @@ bool numberwang(int n)
 {
 	if(n == 0)
 	{
-		cout << endl << "That's Numberwang!" << endl;
+		cout << endl << "That's Numberwang!" << endl << endl;
 		return true;
 	}
 	return false;
@@ -17,7 +17,8 @@ int main()
 	bool player = true;
 	string name1;
 	string name2;
-	int round;
+	int roundMax;
+	int round = 1;
 	int temp;
 	int time = rand() % 5;
        cout << "Hello, and welcome to Numberwang, the maths quiz that simply everyone is talking about!" << endl;
@@ -29,12 +30,14 @@ cout << "what is player 2's name? ";
 cin >> name2;
 cout << endl; 
  cout << "How many rounds? ";
- cin >> round;
+ cin >> roundMax;
  cout << endl;
- cout << "Well, if you're ready, let's play Numberwang!" << endl;
+ cout << "Well, if you're ready, let's play Numberwang!" << endl << endl;
+ cout << "Round 1, " << name1 << " to play first." << endl << endl;
 
-while(round>0)
+while(round<=roundMax)
 {
+	
 	if(player)
 	{
 		cout << name1 << ": ";
@@ -50,15 +53,17 @@ while(round>0)
 
 	if(numberwang(time))
 	{
-		round --;
+		round ++;
 		time = rand() % 5 + 1;
 		if(player)
 		{
 			player = false;
+			cout << "Round " << round << ", " << name1 << " to play first. " << endl << endl;
 		}
 		else
 		{
 			player = true;
+			 cout << "Round " << round << ", " << name2 << " to play first. " << endl << endl;
 		}
 
 	}
