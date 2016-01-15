@@ -15,6 +15,7 @@ bool numberwang(int n)
 int main()
 {
 	bool player = true;
+	bool pStart = false;
 	string name1;
 	string name2;
 	int roundMax;
@@ -55,14 +56,16 @@ while(round<=roundMax)
 	{
 		round ++;
 		time = rand() % 5 + 1;
-		if(player)
+		if(pStart)
 		{
-			player = false;
+			pStart = false;
+			player = true;
 			cout << "Round " << round << ", " << name1 << " to play first. " << endl << endl;
 		}
 		else
 		{
-			player = true;
+			pStart = true;
+			player = false;
 			 cout << "Round " << round << ", " << name2 << " to play first. " << endl << endl;
 		}
 
